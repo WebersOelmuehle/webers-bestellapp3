@@ -50,5 +50,5 @@ App läuft unter http://localhost:3000
 
 ## Sicherheit (intern)
 - Optionaler PIN (APP_PIN) auf Startseite
-- Zusätzlich kannst du den Link nur an Stammkunden geben (intern)
+- Zusätzlich kannst du den Link nur an Stammkunden geben (intern) 
 
