@@ -1,4 +1,5 @@
-export default function Page({ params }: { params: { slug: string } }) {
+type Props = { params: { slug: string } };
+
+export default function Page({ params }: Props) {
   return <main>Kategorie: {params.slug}</main>;
 }
-
