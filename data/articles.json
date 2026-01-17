@@ -1,0 +1,6 @@
+[
+  { "id": "O-001", "name": "Äpfel", "unit": "kg", "category": "obst" },
+  { "id": "O-002", "name": "Bananen", "unit": "kg", "category": "obst" },
+  { "id": "G-001", "name": "Tomaten", "unit": "kg", "category": "gemuese" },
+  { "id": "G-002", "name": "Gurken", "unit": "stk", "category": "gemuese" }
+]
