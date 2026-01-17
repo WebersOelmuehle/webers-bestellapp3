@@ -1,6 +1,16 @@
 [
-  { "id": "O-001", "name": "Äpfel", "unit": "kg", "category": "obst" },
-  { "id": "O-002", "name": "Bananen", "unit": "kg", "category": "obst" },
-  { "id": "G-001", "name": "Tomaten", "unit": "kg", "category": "gemuese" },
-  { "id": "G-002", "name": "Gurken", "unit": "stk", "category": "gemuese" }
+  {
+    "artikelnummer": "1001",
+    "name": "Tomaten 6kg Kiste",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "2001",
+    "name": "Mozzarella 1kg",
+    "einheit": "Beutel",
+    "kategorie": "kaese",
+    "bild_url": ""
+  }
 ]
