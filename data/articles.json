@@ -8,7 +8,14 @@
   },
   {
     "artikelnummer": "2001",
-    "name": "Mozzarella 1kg",
+    "name": "Mozzarella gerieben 1kg",
+    "einheit": "Beutel",
+    "kategorie": "kaese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "2535",
+    "name": "Grana Padano DOP gerieben 1kg",
     "einheit": "Beutel",
     "kategorie": "kaese",
     "bild_url": ""
