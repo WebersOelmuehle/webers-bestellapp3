@@ -1,5 +1,4 @@
 import articles from "@/data/articles.json";
-
 type Article = {
   artikelnummer: string;
   name: string;
