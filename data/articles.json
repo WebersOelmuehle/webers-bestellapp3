@@ -1,23 +1,779 @@
 [
   {
-    "artikelnummer": "1001",
-    "name": "Tomaten 6kg Kiste",
+    "artikelnummer": "684",
+    "name": "Cocktail Tomaten einzelne 250g Schale",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Cocktail Tomaten Karton 12x250g",
     "einheit": "Kiste",
     "kategorie": "gemuese",
     "bild_url": ""
   },
   {
-    "artikelnummer": "2001",
-    "name": "Mozzarella gerieben 1kg",
-    "einheit": "Beutel",
-    "kategorie": "molkereiprodukte",
+    "artikelnummer": "701",
+    "name": "Fleischtomaten kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
     "bild_url": ""
   },
   {
-    "artikelnummer": "2535",
-    "name": "Grana Padano DOP gerieben 1kg",
-    "einheit": "Beutel",
-    "kategorie": "kaese",
+    "artikelnummer": "701",
+    "name": "Fleischtomaten Kiste =  7kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "613",
+    "name": "Strauchtomaten 5 kg Kiste",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "613",
+    "name": "Strauchtomaten je kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "664",
+    "name": "Tomaten Cherry Strauch 3 kg Kiste",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "790",
+    "name": "Tomaten rund / Kilogramm / kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "790",
+    "name": "Tomaten rund 6g Kiste",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "702",
+    "name": "Auberginen NL / kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Auberginen Kiste =  5 KG",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "738",
+    "name": "Avocado Stück 227/274g",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Avocado Kiste =  18 Stück",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "653",
+    "name": "Bananen einzeln je kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Bananen Kiste =  18 kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "610",
+    "name": "BasilikumSchale 150g",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "785",
+    "name": "Bio Bananen Kiste 18kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "745",
+    "name": "Birnen Abate IT / Preis je kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "654",
+    "name": "Blumenkohl einzelne Stück",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Blumenkohl Kiste = 6 Stück",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "667",
+    "name": "Broccoli einzeln je kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Broccoli Kiste = 6kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "662",
+    "name": "Champignon frisch 3 kg Steige",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "708",
+    "name": "Eisberg Kiste =  10 Stück",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "708",
+    "name": "Eisberg stück",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "714",
+    "name": "Feldsalat 1 kg",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "616",
+    "name": "Fenchel einzelne Stück / je Kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Fenchel Kiste = 5 Kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "21",
+    "name": "Gemüsespieße Kiste = 12 Stück",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "694",
+    "name": "Granatapfel Kiste 12Stk. 3kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "693",
+    "name": "Granatapfel einzeln Stück",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "778",
+    "name": "Gurken einzeln Stück",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Gurken Karton = 12 Stück",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "676",
+    "name": "Karotten 1kg DE",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "617",
+    "name": "Karotten 9 kg Kiste Gourmet",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "617",
+    "name": "Karotten Sack 10kg",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "675",
+    "name": "Kartoffeln 10 kg Drillinge",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "614",
+    "name": "Kartoffeln 10 kg Annabelle",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "736",
+    "name": "Kartoffeln 2 kg festkochend",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "737",
+    "name": "Kartoffeln 25 kg festkochend groß",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "681",
+    "name": "Minze frisch, 150g Schale",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "800",
+    "name": "Mischsalat Express 1kg Beutel",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "801",
+    "name": "Mischsalat Bunt 1kg Beutel",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "756",
+    "name": "Orangen ES einzeln je Kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Orangen Kiste = 15 kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Paprika grün Kiste = 5kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Paprika gelb Kiste = 5 kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "666",
+    "name": "Paprika Mix 500g ES",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Paprika Mix Kiste = 10 Beutel",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "599",
+    "name": "Paprika rot einzeln je Kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Paprika rot Kiste = 5 kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "729",
+    "name": "Petersilie kraus 500g Bund",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "728",
+    "name": "Petersilie Blatt 500g Bund",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "674",
+    "name": "Rote Beete gekocht 500g",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Rote Beete Karton = 12 x 500g",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "772",
+    "name": "Rotkohl einzeln Stück je kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Rotkohl Sack =  10 Kg",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "712",
+    "name": "Ruccola 1 kg Steige",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Ruccola 125g Kiste = 10 Schalen",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "658",
+    "name": "Rucola 125g Schale einzeln",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "713",
+    "name": "Rucola 500g Schale Pomona",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "400",
+    "name": "Schalotten 250g Netz",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "731",
+    "name": "Schnittlauch 10 er Bund",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "715",
+    "name": "Sellerieknollen",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "5991",
+    "name": "Spitzpaprika rot / Kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "773",
+    "name": "Weißkohl einzeln je kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Weißkohl Sack = 10 kg",
+    "einheit": "Sack",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "758",
+    "name": "Zitronen Kiste 6kg / 35 Stück",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "758",
+    "name": "Zitronen Stück / Kl. 1",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "659",
+    "name": "Zucchini einzeln je Kg",
+    "einheit": "kg",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Zucchini Kiste = 5 Kg",
+    "einheit": "Kiste",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "760",
+    "name": "Zwiebeln 1 kg Netze",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "735",
+    "name": "Zwiebeln 10kg Sack Metzger",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "734",
+    "name": "Zwiebeln 25kg Sack",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "733",
+    "name": "Zwiebeln 5 kg",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "771",
+    "name": "Zwiebeln Rot 10kg",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "863",
+    "name": "Zwiebeln Rot 5 kg",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "672",
+    "name": "Zwiebeln Rot 500g Netz",
+    "einheit": "Stück",
+    "kategorie": "gemuese",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1770",
+    "name": "Erdnuß Öl 10 Ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": "https://azgkybhrcq.cloudimg.io/v7/https%3A%2F%2Fcdn.transgourmet.de%2Fdam%2Fsftp-prod%2F2%2F234%2F234905b8133acba2d5b7862b2eecc6f94381eddb%2F496e9efc23e74c3787e10ace7399f723.jpg?ci_url_encoded=1&w=250"
+  },
+  {
+    "artikelnummer": "1711",
+    "name": "Friteusen Öl 10ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBMqA495XmCn1fjNwUSorOaNXZ_6V91XUVug&s"
+  },
+  {
+    "artikelnummer": "4006",
+    "name": "Likrema halbflüssiges Fett 10kg",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1739",
+    "name": "Olivenöl 1 L. Extra Virgin 100% Italien",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": "https://images.openfoodfacts.org/images/products/805/864/791/0215/front_fr.12.full.jpg"
+  },
+  {
+    "artikelnummer": "1738",
+    "name": "Olivenöl 5ltr ARCO",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "7068",
+    "name": "Olivenöl Chef Mischung 5l Kanister",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1741",
+    "name": "Olivenöl Extra Vergine 1 ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1737",
+    "name": "Olivenöl Extra Vergine 5 l Kanister",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "17415",
+    "name": "Olivenöl Mischung 51 % / 49 % 1 Liter",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "4000",
+    "name": "Pflanzen Fett Likrema 10kg Block",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "4019",
+    "name": "Phase Fett 3,7ltr \"Lukull\"",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "4020",
+    "name": "Prep Butterfett 2 l",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1740",
+    "name": "Rapsöl 1 l Brölio",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Rapsöl Karton = 15 x 1 Liter",
+    "einheit": "Karton",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1713",
+    "name": "Rapsöl Öl 10ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": "data:image/jpeg;base64,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"
+  },
+  {
+    "artikelnummer": "4009",
+    "name": "Risso Exquisit Butterfett  3 l.",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "4003",
+    "name": "Risso Longlife Halbfl.Fett 10kg  Bag in Box",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1723",
+    "name": "Sonnenblumen Öl 10ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1726",
+    "name": "Sonnenblumenöl 1ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "9999",
+    "name": "Sonneblumenöl Karton = 15 x 1Liter",
+    "einheit": "Karton",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1931",
+    "name": "Melfor Essig 1 ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1932",
+    "name": "Melfor Essig  10 l",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1933",
+    "name": "Balsamico essig 1 l",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1934",
+    "name": "Balsamico Essig 5 Liter",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "19345",
+    "name": "Balsamico Essig TG dunkel 2 L",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1913",
+    "name": "Kräuteressig Kressi 10 Liter, aus Branntwein 5% Säure",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1905",
+    "name": "Tafel Essig  10ltr 5% Säure",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1901",
+    "name": "Weißweinessig 1 l ital. Arco",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1908",
+    "name": "Salata Essig 10ltr \"Kühne\"",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1906",
+    "name": "Condimento / Balsamico weiß 500ml il Borgo",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1929",
+    "name": "Condimento Balsamico bianco 2l",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1935",
+    "name": "Crema Balsamico di Modena 500 ml",
+    "einheit": "Stück",
+    "kategorie": "konserven",
+    "bild_url": ""
+  },
+  {
+    "artikelnummer": "1938",
+    "name": "Balsamico Essig Di Modena \"aceto\" 0,5ltr",
+    "einheit": "Stück",
+    "kategorie": "konserven",
     "bild_url": ""
   }
 ]
