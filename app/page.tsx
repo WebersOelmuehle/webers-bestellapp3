@@ -1,5 +1,5 @@
 const CATEGORIES = [
-  { slug: "obst-gemuese", label: "Obst/Gemüse" },
+  { slug: "obst-gemuese", label: "Obst & Gemüse", image: "https://www.webers-oelmuehle.de/img/kunde/images/750x450/I36729I36039IANGE1673523423I.jpg" },
   { slug: "fleisch-frisch", label: "Fleisch frisch" },
   { slug: "fleisch-tiefkuehl", label: "Fleisch TK" },
   { slug: "tiefkuehl-obst-gemuese", label: "TK Obst/Gemüse" },
