@@ -14,9 +14,15 @@ type Props = {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
 
-  const list = (articles as Article[]).filter(
-    (a) => (a.kategorie || "").toLowerCase() === slug.toLowerCase()
-  );
+const normalize = (k?: string) => {
+  const v = (k || "").toLowerCase();
+  if (v === "obst" || v === "gemuese") return "obst-gemuese";
+  return v;
+};
+
+const list = (articles as Article[]).filter(
+  (a) => normalize(a.kategorie) === slug.toLowerCase()
+);
 
   return (
     <main style={{ maxWidth: 1100, margin: "40px auto", padding: "0 16px" }}>
