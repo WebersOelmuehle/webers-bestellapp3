@@ -22,6 +22,36 @@ type CartItem = {
   qty: number;
 };
 
+// Kategorie -> Icon (für Kunden, die nach Bildern/Icons suchen)
+function getCategoryIcon(k?: string) {
+  const v = (k || "").toLowerCase().trim();
+
+  if (v.includes("obst") || v.includes("gemüse") || v.includes("gemuese")) return "🍎";
+  if (v.includes("salat")) return "🥗";
+
+  if (v.includes("fleisch")) return "🥩";
+  if (v.includes("fisch")) return "🐟";
+
+  if (v.includes("tiefkühl") || v.includes("tiefkuehl") || v.includes("tk")) return "❄️";
+  if (v.includes("pommes")) return "🍟";
+
+  if (v.includes("käse") || v.includes("kaese")) return "🧀";
+  if (v.includes("milch") || v.includes("molkerei") || v.includes("joghurt")) return "🥛";
+
+  if (v.includes("konserve") || v.includes("dose") || v.includes("dosen")) return "🥫";
+
+  if (v.includes("pasta") || v.includes("nudel")) return "🍝";
+  if (v.includes("mehl") || v.includes("pizza") || v.includes("teig")) return "🍕";
+
+  if (v.includes("getränk") || v.includes("getraenk")) return "🥤";
+
+  if (v.includes("non food") || v.includes("non-food") || v.includes("hygiene") || v.includes("reiniger"))
+    return "🧻";
+
+  // Standard / unbekannt
+  return "📦";
+}
+
 export default function CategoryClient({ items }: Props) {
   const [cart, setCart] = useState<Record<string, CartItem>>({});
   const [open, setOpen] = useState(false);
@@ -134,6 +164,7 @@ export default function CategoryClient({ items }: Props) {
         {items.map((a) => {
           const inCart = cart[a.artikelnummer];
           const qty = inCart?.qty ?? 0;
+          const icon = getCategoryIcon(a.kategorie);
 
           return (
             <div
@@ -148,15 +179,8 @@ export default function CategoryClient({ items }: Props) {
                 gap: 12,
               }}
             >
-              {/* Linke Seite: Bild + Artikelinfo */}
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  minWidth: 0,
-                }}
-              >
+              {/* Linke Seite: Bild/Icon + Artikelinfo */}
+              <div style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
                 <div
                   style={{
                     width: 64,
@@ -168,41 +192,37 @@ export default function CategoryClient({ items }: Props) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: 11,
-                    color: "#777",
                     border: "1px solid #e6e6e6",
+                    position: "relative",
                   }}
                   aria-label="Artikelbild"
                 >
+                  {/* Icon immer als Fallback vorhanden */}
+                  <div style={{ fontSize: 28, lineHeight: 1 }}>{icon}</div>
+
+                  {/* Wenn Bild vorhanden: darüber legen */}
                   {a.bild_url ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={a.bild_url}
                       alt={a.name}
                       style={{
+                        position: "absolute",
+                        inset: 0,
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
                       }}
                       onError={(e) => {
-                        // wenn Bild-Link kaputt ist → Bild ausblenden, Platzhalter bleibt sichtbar
-                        (e.currentTarget as HTMLImageElement).style.display =
-                          "none";
+                        // Bild kaputt -> ausblenden, Icon bleibt sichtbar
+                        (e.currentTarget as HTMLImageElement).style.display = "none";
                       }}
                     />
-                  ) : (
-                    <span>Bild</span>
-                  )}
+                  ) : null}
                 </div>
 
                 <div style={{ minWidth: 0 }}>
-                  <div
-                    style={{
-                      fontWeight: 700,
-                      fontSize: 16,
-                      lineHeight: 1.2,
-                    }}
-                  >
+                  <div style={{ fontWeight: 700, fontSize: 16, lineHeight: 1.2 }}>
                     {a.name}
                   </div>
                   <div style={{ fontSize: 13, opacity: 0.7, marginTop: 2 }}>
