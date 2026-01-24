@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import OrderForm from "./OrderForm";
 
 type Article = {
@@ -45,22 +45,73 @@ function getCategoryIcon(k?: string) {
 
   if (v.includes("getränk") || v.includes("getraenk")) return "🥤";
 
-  if (v.includes("non food") || v.includes("non-food") || v.includes("hygiene") || v.includes("reiniger"))
+  if (
+    v.includes("non food") ||
+    v.includes("non-food") ||
+    v.includes("hygiene") ||
+    v.includes("reiniger")
+  )
     return "🧻";
 
-  // Standard / unbekannt
   return "📦";
 }
+
+const FAV_KEY = "webers_bestellapp_favorites_v1";
 
 export default function CategoryClient({ items }: Props) {
   const [cart, setCart] = useState<Record<string, CartItem>>({});
   const [open, setOpen] = useState(false);
+
+  // Favoriten: wir speichern nur Artikelnummern
+  const [favorites, setFavorites] = useState<Record<string, true>>({});
+  const [onlyFavs, setOnlyFavs] = useState(false);
+
+  // Favoriten laden (beim Start)
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(FAV_KEY);
+      if (!raw) return;
+      const arr = JSON.parse(raw) as string[];
+      if (Array.isArray(arr)) {
+        const map: Record<string, true> = {};
+        for (const id of arr) map[id] = true;
+        setFavorites(map);
+      }
+    } catch {
+      // ignorieren
+    }
+  }, []);
+
+  // Favoriten speichern (bei Änderung)
+  useEffect(() => {
+    try {
+      const ids = Object.keys(favorites);
+      localStorage.setItem(FAV_KEY, JSON.stringify(ids));
+    } catch {
+      // ignorieren
+    }
+  }, [favorites]);
 
   const cartItems = useMemo(() => Object.values(cart), [cart]);
   const cartCount = useMemo(
     () => cartItems.reduce((sum, it) => sum + (it.qty || 0), 0),
     [cartItems]
   );
+
+  const favCount = useMemo(() => Object.keys(favorites).length, [favorites]);
+
+  function isFav(a: Article) {
+    return !!favorites[a.artikelnummer];
+  }
+
+  function toggleFav(a: Article) {
+    setFavorites((prev) => {
+      const copy = { ...prev };
+      if (copy[a.artikelnummer]) delete copy[a.artikelnummer];
+      else copy[a.artikelnummer] = true;
+      return copy;
+    });
+  }
 
   function addOne(a: Article) {
     setCart((prev) => {
@@ -116,6 +167,23 @@ export default function CategoryClient({ items }: Props) {
     });
   }
 
+  // Anzeige-Liste: Favoriten zuerst + optional nur Favoriten
+  const displayItems = useMemo(() => {
+    const list = items.slice();
+
+    list.sort((a, b) => {
+      const af = favorites[a.artikelnummer] ? 1 : 0;
+      const bf = favorites[b.artikelnummer] ? 1 : 0;
+      if (af !== bf) return bf - af; // Favoriten nach oben
+      return a.name.localeCompare(b.name);
+    });
+
+    if (onlyFavs) {
+      return list.filter((a) => favorites[a.artikelnummer]);
+    }
+    return list;
+  }, [items, favorites, onlyFavs]);
+
   return (
     <div>
       {/* Top-Leiste */}
@@ -136,10 +204,31 @@ export default function CategoryClient({ items }: Props) {
             gap: 10,
             alignItems: "center",
             justifyContent: "space-between",
+            flexWrap: "wrap",
           }}
         >
-          <div style={{ fontSize: 14, opacity: 0.8 }}>
-            Im Warenkorb: <b>{cartCount}</b>
+          <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+            <div style={{ fontSize: 14, opacity: 0.8 }}>
+              Im Warenkorb: <b>{cartCount}</b>
+            </div>
+
+            <button
+              onClick={() => setOnlyFavs((v) => !v)}
+              style={{
+                padding: "8px 10px",
+                borderRadius: 12,
+                border: "1px solid #ddd",
+                background: onlyFavs ? "#fff7d6" : "white",
+                cursor: "pointer",
+                fontWeight: 700,
+                fontSize: 13,
+              }}
+              aria-label="Nur Favoriten anzeigen"
+              title="Nur Favoriten anzeigen"
+            >
+              ⭐ Favoriten {favCount}
+              {onlyFavs ? " (AN)" : ""}
+            </button>
           </div>
 
           <button
@@ -161,16 +250,17 @@ export default function CategoryClient({ items }: Props) {
 
       {/* Artikel-Liste */}
       <div style={{ display: "grid", gap: 10 }}>
-        {items.map((a) => {
+        {displayItems.map((a) => {
           const inCart = cart[a.artikelnummer];
           const qty = inCart?.qty ?? 0;
           const icon = getCategoryIcon(a.kategorie);
+          const fav = isFav(a);
 
           return (
             <div
               key={a.artikelnummer}
               style={{
-                border: "1px solid #e5e5e5",
+                border: fav ? "2px solid #f0c400" : "1px solid #e5e5e5",
                 borderRadius: 14,
                 padding: 12,
                 display: "flex",
@@ -214,7 +304,6 @@ export default function CategoryClient({ items }: Props) {
                         objectFit: "cover",
                       }}
                       onError={(e) => {
-                        // Bild kaputt -> ausblenden, Icon bleibt sichtbar
                         (e.currentTarget as HTMLImageElement).style.display = "none";
                       }}
                     />
@@ -222,9 +311,29 @@ export default function CategoryClient({ items }: Props) {
                 </div>
 
                 <div style={{ minWidth: 0 }}>
-                  <div style={{ fontWeight: 700, fontSize: 16, lineHeight: 1.2 }}>
-                    {a.name}
+                  <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                    <button
+                      onClick={() => toggleFav(a)}
+                      style={{
+                        border: "1px solid #ddd",
+                        background: fav ? "#fff7d6" : "white",
+                        borderRadius: 10,
+                        padding: "6px 8px",
+                        cursor: "pointer",
+                        fontWeight: 800,
+                        lineHeight: 1,
+                      }}
+                      aria-label={fav ? "Favorit entfernen" : "Als Favorit markieren"}
+                      title={fav ? "Favorit entfernen" : "Als Favorit markieren"}
+                    >
+                      {fav ? "⭐" : "☆"}
+                    </button>
+
+                    <div style={{ fontWeight: 700, fontSize: 16, lineHeight: 1.2 }}>
+                      {a.name}
+                    </div>
                   </div>
+
                   <div style={{ fontSize: 13, opacity: 0.7, marginTop: 2 }}>
                     {a.artikelnummer}
                     {a.einheit ? ` • ${a.einheit}` : ""}
