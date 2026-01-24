@@ -148,12 +148,67 @@ export default function CategoryClient({ items }: Props) {
                 gap: 12,
               }}
             >
-              {/* Linke Seite: Artikelinfo */}
-              <div style={{ minWidth: 0 }}>
-                <div style={{ fontWeight: 700, fontSize: 16 }}>{a.name}</div>
-                <div style={{ fontSize: 13, opacity: 0.7, marginTop: 2 }}>
-                  {a.artikelnummer}
-                  {a.einheit ? ` • ${a.einheit}` : ""}
+              {/* Linke Seite: Bild + Artikelinfo */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  minWidth: 0,
+                }}
+              >
+                <div
+                  style={{
+                    width: 64,
+                    height: 64,
+                    borderRadius: 12,
+                    overflow: "hidden",
+                    background: "#f2f2f2",
+                    flex: "0 0 auto",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 11,
+                    color: "#777",
+                    border: "1px solid #e6e6e6",
+                  }}
+                  aria-label="Artikelbild"
+                >
+                  {a.bild_url ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={a.bild_url}
+                      alt={a.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                      onError={(e) => {
+                        // wenn Bild-Link kaputt ist → Bild ausblenden, Platzhalter bleibt sichtbar
+                        (e.currentTarget as HTMLImageElement).style.display =
+                          "none";
+                      }}
+                    />
+                  ) : (
+                    <span>Bild</span>
+                  )}
+                </div>
+
+                <div style={{ minWidth: 0 }}>
+                  <div
+                    style={{
+                      fontWeight: 700,
+                      fontSize: 16,
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {a.name}
+                  </div>
+                  <div style={{ fontSize: 13, opacity: 0.7, marginTop: 2 }}>
+                    {a.artikelnummer}
+                    {a.einheit ? ` • ${a.einheit}` : ""}
+                  </div>
                 </div>
               </div>
 
