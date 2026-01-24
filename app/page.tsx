@@ -31,19 +31,31 @@ export default function Page() {
       >
         {CATEGORIES.map((c) => (
           <a
-            key={c.slug}
-            href={`/kategorie/${c.slug}`}
-            style={{
-              border: "1px solid #e5e5e5",
-              borderRadius: 12,
-              padding: 16,
-              textDecoration: "none",
-              color: "inherit",
-              background: "white",
-            }}
+  key={c.slug}
+  href={`/kategorie/${c.slug}`}
+  style={{
+    border: "1px solid #e5e5e5",
+    borderRadius: 12,
+    padding: 16,
+    textDecoration: "none",
+    color: "inherit",
+    background: c.slug === "obst-gemuese"
+      ? `linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)), url("https://www.webers-oelmuehle.de/img/kunde/images/750x450/I36729I36039IANGE1673523423I.jpg")`
+      : "white",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: 120,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+  }}
+>
+
           >
-            <div style={{ fontSize: 18, fontWeight: 700 }}>{c.label}</div>
-            <div style={{ marginTop: 6, opacity: 0.7, fontSize: 13 }}>
+            <div style={{ fontWeight: 700, color: c.slug === "obst-gemuese" ? "white" : "inherit" }}>
+  {c.label}
+</div>
+
               öffnen →
             </div>
           </a>
