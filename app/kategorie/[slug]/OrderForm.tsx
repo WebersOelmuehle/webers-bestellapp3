@@ -1,13 +1,30 @@
-async function sendMail() {
-  if (items.length === 0) return;
+"use client";
 
-  try {
-    const res = await fetch("/api/order", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        firma,
-        name,
-        telefon,
-        hinweis,
-        items,
+import { useMemo, useState } from "react";
+
+type CartItem = {
+  artikelnummer: string;
+  name: string;
+  einheit?: string;
+  qty: number;
+};
+
+export default function OrderForm({
+  items,
+  onClear,
+  onClose,
+}: {
+  items: CartItem[];
+  onClear: () => void;
+  onClose: () => void;
+}) {
+  const [firma, setFirma] = useState("");
+  const [name, setName] = useState("");
+  const [telefon, setTelefon] = useState("");
+  const [hinweis, setHinweis] = useState("");
+  const [sending, setSending] = useState(false);
+
+  const lines = useMemo(() => {
+    return items
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name))
