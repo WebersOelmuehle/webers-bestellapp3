@@ -50,8 +50,6 @@ export default function Page() {
     justifyContent: "flex-end",
   }}
 >
-
-          >
             <div style={{ fontWeight: 700, color: c.slug === "obst-gemuese" ? "white" : "inherit" }}>
   {c.label}
 </div>
